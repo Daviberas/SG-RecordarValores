@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            <p>
+                <label>Contador que viene por ViewBag: @ViewBag.contador</label>
+                <br />
+                <label>Contador que viene por RoutedParams: @ViewContext.RouteData.Values["id"]</label>
+            </p>
+            <input type="submit" value="+1" />
+        }
+    </div>
+</body>
+</html>
